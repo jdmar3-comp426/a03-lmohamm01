@@ -64,6 +64,7 @@ export function countArray(array) {
         if (!(variable[array[i]])) {
             variable[array[i]] = 1;
         }
-        return variable
     }
+    return variable
+
 }
