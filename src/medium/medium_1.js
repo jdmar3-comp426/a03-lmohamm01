@@ -26,12 +26,14 @@ export function getSum(array) {
  * console.log(getMedian(array)); // 4.5
  */
 export function getMedian(array) {
+    Array.sort(array);
+
     var median = 0;
-    if (array.length % 2 != 0) {
-        median = ((array.length + 1) / 2)
-    }
     if (array.length % 2 == 0) {
-        median = ((array.length) / 2) + (((array.length) / 2) - 1)
+        var sum = array[array.length / 2] + array[array.length / 2 - 1];
+        median = sum / 2
+    } else {
+        median = array[array.length / 2];
     }
     return median;
 }
