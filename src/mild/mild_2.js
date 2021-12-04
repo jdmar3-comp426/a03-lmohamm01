@@ -8,7 +8,7 @@
 export function identifyVariable(variable) {
     let type = typeof(variable);
     let value = variable
-    return { x, y };
+    return { type, value };
 }
 
 
@@ -33,6 +33,7 @@ export function identifyArray(array) {
             type: typeof array[i],
             value: array[i]
         })
+
     }
     return newone;
 }
