@@ -57,12 +57,13 @@ export function maxAndMin(numbers) {
  */
 export function countArray(array) {
     var variable = {}
-    let li = 0;
     for (let i = 0; i < array.length; i++) {
         if (variable[array[i]]) {
-            variable[array[i]] = (variable[array[i]]) + 1
+            variable[array[i]] = variable[array[i]] + 1
         }
-        return variable;
+        if (!(variable[array[i]])) {
+            variable[array[i]] = 1;
+        }
+        return variable
     }
-
 }
