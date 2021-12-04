@@ -29,7 +29,7 @@ export function identifyArray(array) {
     let newone = []
 
     for (let i = 0; i < array.length; i++) {
-        output.push({
+        newone.push({
             type: typeof array[i],
             value: array[i]
         })
