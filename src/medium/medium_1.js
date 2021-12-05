@@ -35,7 +35,7 @@ export function getMedian(array) {
         medium = myarray[myarray.length / 2] + myarray[myarray.length / 2 - 1];
         median = sum / 2
     } else {
-        median = array[array.length / 2] - .5;
+        median = array[array.length / 2];
     }
     return median;
 }
