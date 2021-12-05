@@ -27,7 +27,7 @@ export function getSum(array) {
  */
 export function getMedian(array) {
     var myarray = array;
-    myarray = myarr.sort(function(x, y) {
+    myarray = myarray.sort(function(x, y) {
         return x - y;
     });
     var median = 0;
