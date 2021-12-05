@@ -124,10 +124,10 @@ export const everyEven = (arr, test) => {
  */
 export const someEven = (arr, test) => {
     for (let i = 0; i < arr.length; i += 2) {
-        if ((test(arr[i])) != true) {
-            return false;
+        if ((test(arr[i])) == true) {
+            return true;
         } else {
-            return true
+            return false;
         }
     }
 };
@@ -187,5 +187,9 @@ export const anEvenIsOdd = (arr) => {
  *   pass the test. You must use the filter function.
  */
 export const hasExactly = (arr, test, n) => {
-
+    const myoutput = filter(arr, text);
+    if (myoutput.pass.length != n) {
+        return false;
+    }
+    return true;
 };
