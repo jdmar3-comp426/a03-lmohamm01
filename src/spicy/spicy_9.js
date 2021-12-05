@@ -123,8 +123,8 @@ export const everyEven = (arr, test) => {
  *    someEven([0, 0, 0, 0, 0], x => x === 0)  <--  returns true
  */
 export const someEven = (arr, test) => {
-    for (let i = 0; i < arr.length; i += 2) {
-        if ((test(arr[i])) == true) {
+    for (let i = 0; i < arr.length; i++) {
+        if (test(arr[i]) && i % 2 == 0) {
             return true;
         } else {
             return false;
@@ -175,13 +175,7 @@ export const allEvensAreOdd = (arr) => {
  *   array is an odd number. Use the "someEven" function in this function.
  */
 export const anEvenIsOdd = (arr) => {
-    let x = false;
-    if (arr % 2 == 1) {
-        x = true;
-    } else {
-        x = false;
-    }
-    return someEven(arr, x);
+    return someEven(arr, x => x % 2 == 1)
 
 };
 
@@ -193,7 +187,7 @@ export const anEvenIsOdd = (arr) => {
  *   pass the test. You must use the filter function.
  */
 export const hasExactly = (arr, test, n) => {
-    var myoutput = filter(arr, text);
+    var myoutput = filter(arr, test);
     if (myoutput.pass.length == n) {
         return true;
     }
